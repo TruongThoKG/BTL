@@ -47,18 +47,19 @@ private:
     string LoaiTaiKhoan;
     int id; // Thêm thuộc tính id
 public:
-    TaiKhoan() : id(0) {} // Constructor mặc định
+    TaiKhoan(); 
+    TaiKhoan(string un, string pw, string fn, string type, int i);// Constructor mặc định
     string GetTenDangNhap() const;
     string GetMatKhau() const;
     string GetHoTen() const;
     string GetLoaiTaiKhoan() const;
-    int GetId() const { return id; } // Getter cho id
+    int GetId() const;
 
     void SetTenDangNhap(const string& un);
     void SetMatKhau(const string& pw);
     void SetHoTen(const string& fn);
     void SetLoaiTaiKhoan(const string& type);
-    void SetId(int i) { id = i; } // Setter cho id
+    void SetId(int i);
 
     void HienThiThongTin() const;
 };
@@ -72,6 +73,8 @@ protected:
     string DiaChi;
     int Tuoi;
 public:
+	Nguoi();
+	Nguoi(string i, string n, string g, string a, int t);
     string GetMa() const;
     string GetHoTen() const;
     string GetGioiTinh() const;
@@ -82,7 +85,7 @@ public:
     void SetHoTen(const string& n);
     void SetGioiTinh(const string& g);
     void SetDiaChi(const string& a);
-    void SetTuoi(int a);
+    void SetTuoi(int t);
 
     virtual void NhapThongTin() = 0;
     virtual void HienThiThongTin() const = 0;
@@ -97,6 +100,8 @@ private:
     string LichHoc; // Thêm lịch học
     string MaGiangVien; // Thêm mã giảng viên
 public:
+	MonHoc();
+	MonHoc(string id, string name, int c, string lh, string maGV);
     string GetMaMon() const;
     string GetTenMon() const;
     int GetSoTinChi() const;
@@ -121,6 +126,8 @@ private:
     string MaMon;
     float DiemSo;
 public:
+	Diem();
+	Diem(string sid, string cid, float s);
     string GetMaSinhVien() const;
     string GetMaMon() const;
     float GetDiemSo() const;
@@ -140,6 +147,8 @@ private:
 //    vector<string> DSmonDK; // Danh sách môn đăng ký
 public:
 	vector<string> DSmonDK;
+	SinhVien();
+	SinhVien(string i, string n, string g, string a, int t, string m);
     string GetChuyenNganh() const;
     void SetChuyenNganh(const string& m);
 
@@ -158,6 +167,8 @@ class GiangVien : public Nguoi {
 private:
     string BoMon;
 public:
+	GiangVien();
+	GiangVien(string i, string n, string g, string a, int t, string d);
     string GetBoMon() const;
 
     void SetBoMon(const string& d);

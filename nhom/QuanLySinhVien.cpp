@@ -20,15 +20,32 @@ void HienThiTieuDe(const string& tieuDe) {
 // ==================== DINH NGHIA HAM NGOAI CLASS ====================
 
 // TAI KHOAN
+TaiKhoan::TaiKhoan(){
+	TenDangNhap = "";
+	MatKhau = "";
+	HoTen = "";
+	LoaiTaiKhoan = "";
+	id = 0;
+}
+
+TaiKhoan::TaiKhoan(string un, string pw, string fn, string type, int i){
+	TenDangNhap = un;
+	MatKhau = pw;
+	HoTen = fn;
+	LoaiTaiKhoan = type;
+	id = i;
+}
 string TaiKhoan::GetTenDangNhap() const { return TenDangNhap; }
 string TaiKhoan::GetMatKhau() const { return MatKhau; }
 string TaiKhoan::GetHoTen() const { return HoTen; }
 string TaiKhoan::GetLoaiTaiKhoan() const { return LoaiTaiKhoan; }
+int TaiKhoan::GetId() const { return id; }
 
 void TaiKhoan::SetTenDangNhap(const string& un) { TenDangNhap = un; }
 void TaiKhoan::SetMatKhau(const string& pw) { MatKhau = pw; }
 void TaiKhoan::SetHoTen(const string& fn) { HoTen = fn; }
 void TaiKhoan::SetLoaiTaiKhoan(const string& type) { LoaiTaiKhoan = type; }
+void TaiKhoan::SetId(int i) { id = i; }
 
 void TaiKhoan::HienThiThongTin() const {
     cout << BLUE << "+------------------------------------+" << RESET << endl;
@@ -39,6 +56,21 @@ void TaiKhoan::HienThiThongTin() const {
 }
 
 // NGUOI
+Nguoi::Nguoi(){
+	Ma = "";
+	HoTen = "";
+	GioiTinh = "";
+	DiaChi = "";
+	Tuoi = 0;
+}
+
+Nguoi::Nguoi(string i, string n, string g, string a, int t){
+	Ma =i;
+	HoTen = n;
+	GioiTinh = g;
+	DiaChi = a;
+	Tuoi = t;
+}
 string Nguoi::GetMa() const { return Ma; }
 string Nguoi::GetHoTen() const { return HoTen; }
 string Nguoi::GetGioiTinh() const { return GioiTinh; }
@@ -49,9 +81,24 @@ void Nguoi::SetMa(const string& i) { Ma = i; }
 void Nguoi::SetHoTen(const string& n) { HoTen = n; }
 void Nguoi::SetGioiTinh(const string& g) { GioiTinh = g; }
 void Nguoi::SetDiaChi(const string& a) { DiaChi = a; }
-void Nguoi::SetTuoi(int a) { Tuoi = a; }
+void Nguoi::SetTuoi(int t) { Tuoi = t; }
 
 // MON HOC
+MonHoc::MonHoc(){
+	MaMon = "";
+	TenMon = "";
+	SoTinChi = 0;
+	LichHoc = "";
+	MaGiangVien = "";
+}
+
+MonHoc::MonHoc(string id, string name, int c, string lh, string maGV){
+	MaMon = id;
+	TenMon = name;
+	SoTinChi = c;
+	LichHoc = lh;
+	MaGiangVien = maGV;	
+}
 string MonHoc::GetMaMon() const { return MaMon; }
 string MonHoc::GetTenMon() const { return TenMon; }
 int MonHoc::GetSoTinChi() const { return SoTinChi; }
@@ -111,6 +158,16 @@ void MonHoc::HienThiLichHoc() const {
 }
 
 // DIEM
+Diem::Diem(){
+	MaSinhVien = "";
+	MaMon = "";
+	DiemSo = 0;
+}
+Diem::Diem(string sid, string cid, float s){
+	MaSinhVien = sid;
+	MaMon = cid;
+	DiemSo = s;
+}
 string Diem::GetMaSinhVien() const { return MaSinhVien; }
 string Diem::GetMaMon() const { return MaMon; }
 float Diem::GetDiemSo() const { return DiemSo; }
@@ -152,6 +209,16 @@ void Diem::HienThiThongTin() const {
 }
 
 // SINH VIEN
+SinhVien::SinhVien():Nguoi(){
+//	Nguoi();
+	ChuyenNganh = "";
+}
+
+SinhVien::SinhVien(string i, string n, string g, string a, int t, string m):Nguoi(i,n,g,a,t) {
+//	Nguoi(i,n,g,a,t);
+	ChuyenNganh = m;
+}
+
 string SinhVien::GetChuyenNganh() const { return ChuyenNganh; }
 
 void SinhVien::SetChuyenNganh(const string& m) { ChuyenNganh = m; }
@@ -350,6 +417,14 @@ void SinhVien::XemHP(const vector<MonHoc>& DanhSachMonHoc) const {
 }
 
 // GIANG VIEN
+GiangVien::GiangVien():Nguoi(){
+//	Nguoi();
+	BoMon = "";
+}
+GiangVien::GiangVien(string i, string n, string g, string a, int t, string d):Nguoi(i, n, g, a, t){
+//	Nguoi(i, n, g, a, t);
+	BoMon = d;
+}
 string GiangVien::GetBoMon() const { return BoMon; }
 
 void GiangVien::SetBoMon(const string& d) { BoMon = d; }
