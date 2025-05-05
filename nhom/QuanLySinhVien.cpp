@@ -1483,12 +1483,12 @@ void MenuGiangVien(vector<Diem>& DanhSachDiem, const vector<SinhVien>& DanhSachS
             }
             case 4:
                 cout << GREEN << "Dang xuat thanh cong!" << RESET << endl;
-                break;
+                return; // Thêm return để thoát khỏi hàm khi đăng xuất
             default:
                 cout << RED << "Lua chon khong hop le!" << RESET << endl;
         }
         NhanPhimEnter();
-    } while (true);
+    } while (luaChon != 4);
 }
 
 void MenuSinhVien(SinhVien& sv, const vector<Diem>& DanhSachDiem, vector<MonHoc>& DanhSachMonHoc) {
@@ -1550,17 +1550,33 @@ void MenuSinhVien(SinhVien& sv, const vector<Diem>& DanhSachDiem, vector<MonHoc>
                 sv.DKmon(DanhSachMonHoc);
                 break;
             case 5:
-                sv.XemHP(DanhSachMonHoc);
-                break;
-            case 6:
                 cout << GREEN << "Dang xuat thanh cong!" << RESET << endl;
-                break;
+                return; // Thêm return để thoát khỏi hàm khi đăng xuất
             default:
                 cout << RED << "Lua chon khong hop le!" << RESET << endl;
         }
         NhanPhimEnter();
-    } while (true);
+    } while (luaChon != 5);
 }
+
+// Thêm hàm này vào trước hàm main của bạn
+void ThietLapMatKhauGiangVien(map<string, TaiKhoan>& DanhSachTaiKhoan) {
+    // Tạo tài khoản cho các giảng viên với mật khẩu là "123"
+    vector<string> dsMaGV = {"GV001", "GV003", "GV004", "GV005"};
+    
+    for (const auto& maGV : dsMaGV) {
+        TaiKhoan tk;
+        tk.SetTenDangNhap(maGV);
+        tk.SetMatKhau("123");
+        tk.SetHoTen("Giang vien " + maGV);
+        tk.SetLoaiTaiKhoan("giangvien");
+        tk.SetId(stoi(maGV.substr(2))); // Lấy số từ mã GV làm ID
+        DanhSachTaiKhoan[maGV] = tk;
+    }
+    
+    cout << GREEN << "Da thiet lap mat khau cho tat ca giang vien!" << RESET << endl;
+}
+
 
 // ==================== HAM KHOI TAO MON HOC ====================
 void KhoiTaoMonHoc(vector<MonHoc>& DanhSachMonHoc, vector<GiangVien>& DanhSachGiangVien) {

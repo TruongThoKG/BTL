@@ -1,0 +1,50 @@
+DTVT101,Nhap mon nganh Dien Tu - Vien Thong,3,Thu 2, 4 - Sang,GV005
+MAT101,Giai tich 1,2,Thu 3, 5 - Sang,GV001
+CS101,Ky thuat lap trinh,3,Thu 2, 4 - Chieu,GV003
+LA101,Dai so tuyen tinh,3,Thu 3, 5 - Chieu,GV001
+PHY101,Vat ly,3,Thu 6 - Sang,GV002
+PHY102,Thi nghiem vat ly,1,Thu 6 - Chieu,GV002
+DR101,Ve ky thuat,2,Thu 7 - Sang,GV005
+PE101,Giao duc the chat F1,1,Thu 7 - Chieu,GV005
+QP101,Giao duc QP-AN F1,3,Thu 2, 4 - Sang,GV005
+QP102,Giao duc QP-AN F2,2,Thu 3, 5 - Sang,GV005
+QP103,Giao duc QP-AN F3,1,Thu 6 - Sang,GV005
+QP104,Giao duc QP-AN F4,2,Thu 7 - Sang,GV005
+PHI101,Triet hoc Mac - Lenin,3,Thu 2, 4 - Chieu,GV005
+MAT102,Giai tich 2,2,Thu 3, 5 - Chieu,GV001
+EC101,Ly thuyet mach,3,Thu 6 - Chieu,GV005
+PRO101,Ly thuyet xac suat,2,Thu 7 - Chieu,GV001
+PE102,Giao duc the chat F2,1,Thu 2 - Sang,GV005
+ECO201,Kinh te chinh tri Mac - Lenin,2,Thu 3, 5 - Sang,GV005
+SOC201,Chu nghia xa hoi khoa hoc,2,Thu 6 - Sang,GV005
+SIG201,Tin hieu va he thong,2,Thu 7 - Sang,GV005
+ECA201,Ky thuat dien tu tuong tu,3,Thu 2, 4 - Chieu,GV005
+ECD201,Ky thuat dien tu so,2,Thu 3, 5 - Chieu,GV005
+DSA201,Cau truc du lieu va giai thuat,3,Thu 6 - Chieu,GV003
+ANT201,Anten va truyen song,3,Thu 7 - Chieu,GV005
+ITC201,Tin hoc ky thuat trong DT-VT,2,Thu 2, 4 - Sang,GV003
+PE201,Giao duc the chat F3,1,Thu 3, 5 - Sang,GV005
+DSP301,Xu ly tin hieu so,3,Thu 6 - Sang,GV005
+CAO301,Cau truc may tinh va he dieu hanh,3,Thu 7 - Sang,GV003
+ADV301,Ky thuat lap trinh nang cao,3,Thu 2, 4 - Chieu,GV003
+MET301,Ky thuat do luong dien tu,2,Thu 3, 5 - Chieu,GV005
+IDE301,Tu tuong Ho Chi Minh,2,Thu 6 - Chieu,GV005
+ENG301,Tieng Anh / Phap / Nga B1,4,Thu 7 - Chieu,GV004
+PE301,Giao duc the chat F4,1,Thu 2 - Sang,GV005
+HIS401,Lich su Dang CSVN,2,Thu 3, 5 - Sang,GV005
+ENG401,Tieng Anh / Phap / Nga chuyen nganh,3,Thu 6 - Sang,GV004
+INF401,Ly thuyet thong tin,3,Thu 7 - Sang,GV005
+ECE401,Thuc tap dien tu,2,Thu 2, 4 - Chieu,GV005
+MIC401,Ky thuat vi xu ly,3,Thu 3, 5 - Chieu,GV005
+NET401,Mang Vien thong,2,Thu 6 - Chieu,GV005
+DBS401,Co so thong tin so,3,Thu 7 - Chieu,GV003
+OPT501,Ky thuat thong tin quang,3,Thu 2, 4 - Sang,GV005
+MOB501,Ky thuat thong tin vo tuyen,3,Thu 3, 5 - Sang,GV005
+COM501,Thiet ke mang,3,Thu 6 - Sang,GV005
+SEC501,An toan va bao mat mang,3,Thu 7 - Sang,GV005
+EMB501,He thong nhung,3,Thu 2, 4 - Chieu,GV005
+IOT501,Internet of Things,3,Thu 3, 5 - Chieu,GV005
+IOT501,Internet of Things,3,Thu 6 - Chieu,GV003
+PRO601,Do an chuyen nganh,3,Thu 7 - Sang,GV005
+PRO602,Thuc tap tot nghiep,3,Thu 2, 4 - Chieu,GV005
+PRO603,Khoa luan tot nghiep,3,Thu 3, 5 - Chieu,GV005

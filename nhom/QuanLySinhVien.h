@@ -206,5 +206,6 @@ void MenuSinhVien(SinhVien& sv, const vector<Diem>& DanhSachDiem, vector<MonHoc>
 
 // ==================== HAM KHOI TAO MON HOC ====================
 void KhoiTaoMonHoc(vector<MonHoc>& DanhSachMonHoc, vector<GiangVien>& DanhSachGiangVien);
+void ThietLapMatKhauGiangVien(map<string, TaiKhoan>& DanhSachTaiKhoan);
 
 #endif // QUANLYSINHVIEN_H

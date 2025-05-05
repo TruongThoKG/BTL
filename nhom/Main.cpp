@@ -7,6 +7,7 @@ int main() {
     vector<Diem> DanhSachDiem;
     map<string, TaiKhoan> DanhSachTaiKhoan;
 
+	ThietLapMatKhauGiangVien(DanhSachTaiKhoan);
     // Doc du lieu tu file
     DocDanhSachSinhVien(DanhSachSinhVien, FILE_SINHVIEN);
     DocDanhSachGiangVien(DanhSachGiangVien, FILE_GIANGVIEN);
